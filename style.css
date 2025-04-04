@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1d1d1f;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #86868b;
+    margin-bottom: 20px;
+}
+
+/* Cards dos membros */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.member-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.discharge-date {
+    font-size: 14px;
+    color: #86868b;
+    margin-bottom: 15px;
+}
+
+.countdown-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f7;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.countdown-unit {
+    text-align: center;
+}
+
+.countdown-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.countdown-label {
+    font-size: 12px;
+    color: #86868b;
+    margin-top: 5px;
+}
+
+/* Cronômetro final */
+.final-countdown {
+    background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+    color: white;
+    padding: 50px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+}
+
+/* Estilo para quando a contagem terminar */
+.countdown-complete .final-countdown {
+    background: linear-gradient(135deg, #e356ff, #ff00dd);
+    color: rgb(0, 0, 0);
+}
+
+.final-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.countdown-complete .final-title {
+    color: black;
+}
+
+.final-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.countdown-complete .final-subtitle {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.final-countdown-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.final-countdown-unit {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+    min-width: 120px;
+}
+
+.countdown-complete .final-countdown-unit {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.final-countdown-value {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.final-countdown-label {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+}
+
+.countdown-complete .final-countdown-label {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.completed {
+    color: #bf37d1;;
+}
+
+.completed-note {
+    background-color: #bf37d1;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #86868b;
+    margin-top: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    .final-countdown-box {
+        flex-wrap: wrap;
+    }
+    
+    .final-countdown-unit {
+        min-width: 100px;
+        padding: 20px;
+    }
+    
+    .final-countdown-value {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .final-countdown-unit {
+        min-width: 70px;
+        padding: 15px;
+    }
+    
+    .final-countdown-value {
+        font-size: 28px;
+    }
+}
